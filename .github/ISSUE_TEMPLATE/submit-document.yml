@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Use this form to submit a planning document. You can provide a link, attach a file, or both. Leave optional fields blank if you don't know the value.
+        Use this form to submit a planning document. You can provide a link, attach a file, or both. Leave optional fields blank if unspecified.
 
   - type: input
     id: title
