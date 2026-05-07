@@ -1,0 +1,78 @@
+name: Submit a document
+description: Submit a public document related to datacenter planning in Denmark — e.g. a municipal application, local plan, or environmental assessment.
+title: "[Document] "
+labels: ["document submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to submit a planning document. You can provide a link, attach a file, or both. Leave optional fields blank if you don't know the value.
+
+  - type: input
+    id: title
+    attributes:
+      label: "Document title *"
+      placeholder: "e.g. Datacenter ved Stovstrup - anmodning om plangrundlag"
+    validations:
+      required: true
+
+  - type: input
+    id: datacenter_name
+    attributes:
+      label: Datacenter name
+      description: If the document relates to a datacenter already in the dataset, enter its name here.
+      placeholder: "e.g. Microsoft Bramming - Building 1"
+
+  - type: input
+    id: company
+    attributes:
+      label: Company
+      description: Company behind the datacenter project, if known.
+      placeholder: "e.g. Microsoft"
+
+  - type: input
+    id: municipality
+    attributes:
+      label: "Municipality *"
+      placeholder: "e.g. Ringkøbing-Skjern"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: document_type
+    attributes:
+      label: "Document type *"
+      options:
+        - plangrundlag
+        - lokalplan
+        - VVM
+        - miljøvurdering
+        - tilladelse
+        - Other (specify in notes)
+    validations:
+      required: true
+
+  - type: input
+    id: date
+    attributes:
+      label: Publication date
+      description: Date the document was published, if known. Use YYYY-MM-DD, YYYY-MM, or YYYY.
+      placeholder: "e.g. 2023-03"
+
+  - type: input
+    id: original_url
+    attributes:
+      label: Original URL
+      description: Link to the document if it is publicly available. May be a dead link — that is fine.
+      placeholder: "https://..."
+
+  - type: markdown
+    attributes:
+      value: |
+        **Have the file but no URL?** Attach it directly to this issue by dragging it into the text box below, or use the attachment button. GitHub supports PDF uploads up to 10 MB.
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Anything else maintainers should know — including the document type if you selected "Other" above, or context about where you found the file.
