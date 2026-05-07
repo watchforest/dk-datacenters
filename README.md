@@ -4,7 +4,7 @@ A community-maintained dataset of datacenters in Denmark.
 
 ## Discussions
 
-Have questions about the data, or want to discuss something related to datacenters in Denmark? Feel free to [open a discussion](../../discussions) — whether it's about a specific facility, industry trends, or anything else on the topic.
+Have questions about the data, or want to discuss something related to datacenters in Denmark? Feel free to [open a discussion](../../discussions) — whether it's about a specific facility, trends, or anything else on the topic.
 
 ## Contributing
 
