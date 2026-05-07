@@ -44,6 +44,10 @@ The dataset is stored in [`datacenters.csv`](datacenters.csv) and currently cont
 | `network_providers` | Number of network providers present |
 | `url` | Source URL (e.g. datacentermap.com listing) |
 
+## Discussions
+
+Have questions about the data, or want to discuss something related to datacenters in Denmark? Feel free to [open a discussion](../../discussions) — whether it's about a specific facility, industry trends, or anything else on the topic.
+
 ## Contributing
 
 Contributions are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md) for how to add or update entries, and [SOURCES.md](SOURCES.md) for the list of sources used to build and maintain the dataset, as well as articles and other coverage discussing the broader topic of datacenters in Denmark.
