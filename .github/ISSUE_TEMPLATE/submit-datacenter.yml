@@ -1,0 +1,332 @@
+name: Submit a datacenter
+description: Suggest a new datacenter to add to the dataset, or report a correction to an existing entry.
+title: "[Datacenter] "
+labels: ["data submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fill in as many fields as you can. **Required fields are marked with *.** Leave optional fields blank if you don't know the value — don't guess.
+        Please include a source link at the bottom so maintainers can verify the information.
+
+  - type: dropdown
+    id: submission_type
+    attributes:
+      label: "Submission type *"
+      options:
+        - New entry
+        - Correction to existing entry
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "## Identity"
+
+  - type: dropdown
+    id: market
+    attributes:
+      label: "Market *"
+      description: City or region where the facility is located.
+      options:
+        - Aalborg
+        - Copenhagen
+        - Esbjerg
+        - Falster
+        - Fredericia
+        - Herning
+        - Kolding
+        - Odense
+        - Randers
+        - Saeby
+        - Silkeborg
+        - Skanderborg
+        - Skive
+        - Toender
+        - Varde
+        - Viborg
+        - Århus
+        - Other (specify in notes below)
+    validations:
+      required: true
+
+  - type: input
+    id: name
+    attributes:
+      label: "Facility name *"
+      placeholder: "e.g. Industriparken 24 (CPH3)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: status
+    attributes:
+      label: "Status *"
+      options:
+        - Operational
+        - Under Construction
+        - Planned
+        - Decommissioned
+    validations:
+      required: true
+
+  - type: input
+    id: operator
+    attributes:
+      label: "Operator *"
+      placeholder: "e.g. Digital Realty"
+    validations:
+      required: true
+
+  - type: input
+    id: address
+    attributes:
+      label: "Address *"
+      placeholder: "e.g. Industriparken 24, 2750 Ballerup, Denmark"
+    validations:
+      required: true
+
+  - type: input
+    id: google_maps_url
+    attributes:
+      label: Google Maps URL
+      placeholder: "https://maps.google.com/..."
+
+  - type: input
+    id: website
+    attributes:
+      label: Website
+      description: Operator's page for this specific facility.
+      placeholder: "https://..."
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      placeholder: Short description of the facility.
+
+  - type: markdown
+    attributes:
+      value: "## Services"
+
+  - type: input
+    id: services_overview
+    attributes:
+      label: Services overview
+      description: Semicolon-separated list of service types offered.
+      placeholder: "e.g. Suites; Cages; Remote Hands"
+
+  - type: input
+    id: services_specs
+    attributes:
+      label: Services specs
+      placeholder: Detailed service specifications.
+
+  - type: markdown
+    attributes:
+      value: "## Capacity"
+
+  - type: input
+    id: power_mw
+    attributes:
+      label: Power capacity (MW)
+      placeholder: "e.g. 4.8 MW"
+
+  - type: input
+    id: whitespace_sqm
+    attributes:
+      label: White space (sq.m.)
+      placeholder: "e.g. 1,403 sq.m."
+
+  - type: input
+    id: building_size_sqm
+    attributes:
+      label: Building size (sq.m.)
+      placeholder: "e.g. 6,968 sq.m."
+
+  - type: markdown
+    attributes:
+      value: "## Redundancy & tier"
+
+  - type: input
+    id: ups_redundancy
+    attributes:
+      label: UPS redundancy
+      placeholder: "e.g. N+1 or 2N"
+
+  - type: input
+    id: cooling_redundancy
+    attributes:
+      label: Cooling redundancy
+      placeholder: "e.g. N+1 or 2N"
+
+  - type: input
+    id: standby_power_redundancy
+    attributes:
+      label: Standby power redundancy
+      placeholder: "e.g. N+1 or 2N"
+
+  - type: dropdown
+    id: tier_design
+    attributes:
+      label: Tier design
+      description: Uptime Institute Tier level.
+      options:
+        - ""
+        - "I"
+        - "II"
+        - "III"
+        - "IV"
+
+  - type: markdown
+    attributes:
+      value: "## Certifications"
+
+  - type: dropdown
+    id: iso27001
+    attributes:
+      label: ISO 27001
+      options:
+        - ""
+        - "Yes"
+        - "No"
+
+  - type: dropdown
+    id: iso22301
+    attributes:
+      label: ISO 22301
+      options:
+        - ""
+        - "Yes"
+        - "No"
+
+  - type: dropdown
+    id: soc2
+    attributes:
+      label: SOC 2
+      options:
+        - ""
+        - "Yes"
+        - "No"
+
+  - type: markdown
+    attributes:
+      value: "## Physical security"
+
+  - type: dropdown
+    id: mantrap_entry
+    attributes:
+      label: Mantrap entry
+      options:
+        - ""
+        - "Yes"
+        - "No"
+
+  - type: dropdown
+    id: cctv
+    attributes:
+      label: CCTV
+      options:
+        - ""
+        - "Yes"
+        - "No"
+
+  - type: dropdown
+    id: biometric_access
+    attributes:
+      label: Biometric access
+      options:
+        - ""
+        - "Yes"
+        - "No"
+
+  - type: dropdown
+    id: card_access
+    attributes:
+      label: Card access
+      options:
+        - ""
+        - "Yes"
+        - "No"
+
+  - type: dropdown
+    id: fire_suppression
+    attributes:
+      label: Fire suppression
+      options:
+        - ""
+        - "Yes"
+        - "No"
+
+  - type: input
+    id: onsite_security_staff
+    attributes:
+      label: Onsite security staff
+      placeholder: "e.g. Yes, 24/7"
+
+  - type: input
+    id: onsite_technical_staff
+    attributes:
+      label: Onsite technical staff
+      placeholder: "e.g. Yes, 24/7"
+
+  - type: markdown
+    attributes:
+      value: "## Facility"
+
+  - type: input
+    id: construction_type
+    attributes:
+      label: Construction type
+      placeholder: "e.g. Purpose-built or Converted"
+
+  - type: dropdown
+    id: meet_me_room
+    attributes:
+      label: Meet-me room
+      options:
+        - ""
+        - "Yes"
+        - "No"
+
+  - type: dropdown
+    id: office_space
+    attributes:
+      label: Office space
+      options:
+        - ""
+        - "Yes"
+        - "No"
+
+  - type: input
+    id: ixp_count
+    attributes:
+      label: IXP count
+      description: Number of internet exchange points accessible.
+      placeholder: "e.g. 2"
+
+  - type: input
+    id: network_providers
+    attributes:
+      label: Network providers
+      description: Number of network providers present.
+      placeholder: "e.g. 4"
+
+  - type: markdown
+    attributes:
+      value: "## Source"
+
+  - type: input
+    id: url
+    attributes:
+      label: "Source URL *"
+      description: Link to a public source verifying this information (datacentermap.com, operator website, news article, etc.).
+      placeholder: "https://..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      description: Anything else maintainers should know, including the market name if you selected "Other" above.

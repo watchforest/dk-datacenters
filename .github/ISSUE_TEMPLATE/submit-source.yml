@@ -1,0 +1,41 @@
+name: Submit a source
+description: Suggest a source to add to SOURCES.md — an article, report, database, or other resource about datacenters in Denmark.
+title: "[Source] "
+labels: ["source submission"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: "Title *"
+      placeholder: "e.g. Denmark's Data Center Market Report 2025"
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: "URL *"
+      placeholder: "https://..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: "Category *"
+      options:
+        - Databases & directories
+        - News & articles
+        - Industry reports
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description *"
+      description: One or two sentences on what the source covers and why it is useful.
+      placeholder: "e.g. Annual market report covering capacity, investment, and sustainability trends for Danish datacenters."
+    validations:
+      required: true
