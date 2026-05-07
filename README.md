@@ -46,7 +46,7 @@ The dataset is stored in [`datacenters.csv`](datacenters.csv) and currently cont
 
 ## Contributing
 
-Contributions are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md) for how to add or update entries, and [SOURCES.md](SOURCES.md) for the list of sources used to build and maintain the dataset.
+Contributions are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md) for how to add or update entries, and [SOURCES.md](SOURCES.md) for the list of sources used to build and maintain the dataset, as well as articles and other coverage discussing the broader topic of datacenters in Denmark.
 
 ## License
 
