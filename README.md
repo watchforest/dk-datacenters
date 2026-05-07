@@ -8,11 +8,15 @@ Have questions about the data, or want to discuss something related to datacente
 
 ## Contributing
 
-Contributions are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md) for how to add or update entries, and [SOURCES.md](SOURCES.md) for the list of sources used to build and maintain the dataset, as well as articles and other coverage discussing the broader topic of datacenters in Denmark.
+Contributions are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md) for details. You can submit new datacenter entries, corrections, planning documents, or sources via GitHub Issues.
 
 ## Dataset
 
 The dataset is stored in [`data/datacenters.csv`](data/datacenters.csv) and currently contains 88 entries. See [`data/COLUMNS.md`](data/COLUMNS.md) for a description of all columns.
+
+## Documents
+
+[`documents/`](documents/) contains an archive of public planning documents — municipal applications, local plans, environmental assessments, and similar records. See [`documents/README.md`](documents/README.md) for the index and how to contribute.
 
 ## License
 
